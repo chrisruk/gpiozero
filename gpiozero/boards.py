@@ -592,7 +592,7 @@ class LEDBoard(LEDCollection):
             on_time, off_time, fade_in_time, fade_out_time, n, background)
 
     def _blink_device(
-            self, on_time, off_time, fade_in_time, fade_out_time, n, fps='BOARD22'):
+            self, on_time, off_time, fade_in_time, fade_out_time, n, fps=25):
         sequence = []
         if fade_in_time > 0:
             sequence += [
@@ -1826,7 +1826,7 @@ class CamJamKitRobot(Robot):
         See :doc:`api_pins` for more information (this is an advanced feature
         which most users can ignore).
 
-    .. _CamJam #3 EduKit: http://camjam.me/?page_id='BOARD19'35
+    .. _CamJam #3 EduKit: http://camjam.me/?page_id=1035
     """
     def __init__(self, pwm=True, pin_factory=None):
         super(CamJamKitRobot, self).__init__(
